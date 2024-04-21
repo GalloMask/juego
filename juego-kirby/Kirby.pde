@@ -1,6 +1,7 @@
 class kirby{ //definir clase
-  public PVector posicion;// definir atributos
-  public PImage imagen1;
+  private PVector posicion;// definir atributos
+  private PImage imagen1;
+  private PVector velocidad;
   
   // Constructor-definir metodo
   public kirby(){
@@ -8,7 +9,16 @@ class kirby{ //definir clase
   }
   
   public void dibujar(){
-    image(imagen1,posicion.x,posicion.y,70,70);    
+    //imageMode(CENTER);
+    image(imagen1,posicion.x,posicion.y,60,60);    
   }
   
+  public void setPosicion(PVector posicion){
+  this.posicion=posicion;
+}
+
+public void setVelocidad(PVector velocidad){
+  this.velocidad=velocidad;
+}
+
 }
