@@ -16,7 +16,7 @@ class Estrella{
   }
   
   public void dibujar(){
-    image(imagen3,posicion.x,posicion.y,40,20);
+    image(imagen3,posicion.x,posicion.y,45,25);
   }
   public void actualizar() {
     posicion.add(velocidad); // Mueve la estrella según su velocidad

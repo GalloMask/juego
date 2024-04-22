@@ -2,7 +2,7 @@ class Nube{
    private PVector posicion;
   private PImage imagen2;
   private PVector velocidad;
-  private int inc= 1; 
+  private int inc= -1; 
     
   //1 constructor
   public Nube(){

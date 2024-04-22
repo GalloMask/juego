@@ -9,7 +9,6 @@ class kirby{ //definir clase
   }
   
   public void dibujar(){
-    //imageMode(CENTER);
     image(imagen1,posicion.x,posicion.y,60,60);    
   }
   
