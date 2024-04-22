@@ -1,5 +1,6 @@
 public kirby personaje;
 public Nube nube;
+public Estrella estrella;
 PImage fondo;
 
 public void setup(){
@@ -11,6 +12,9 @@ public void setup(){
  personaje.setVelocidad(new PVector(7,0));
  //nube
  nube= new Nube(new PVector (2,10/width),new PVector(5,0)); //si o si el .0 para usar el 2 constuctor
+ //estrella
+ estrella= new Estrella();
+ 
 }
 
 public void draw(){
@@ -18,6 +22,8 @@ public void draw(){
   personaje.dibujar();
   nube.dibujar();
   nube.mover();
+  estrella.dibujar();
+  estrella.actualizar();
 }
 
 public void keyPressed(){

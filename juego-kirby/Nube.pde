@@ -1,4 +1,4 @@
-private class Nube{
+class Nube{
    private PVector posicion;
   private PImage imagen2;
   private PVector velocidad;
@@ -7,6 +7,8 @@ private class Nube{
   //1 constructor
   public Nube(){
     imagen2=loadImage("nube.png");
+    posicion = new PVector(random(width), random(50, 200)); // Posición inicial aleatoria arriba
+    velocidad = new PVector(5, 0); // Velocidad horizontal inicial
   }
   //2 constructor
  public Nube(PVector posicion, PVector velocidad){
@@ -20,14 +22,11 @@ private class Nube{
   }
   
   public void mover(){
-     posicion.add(velocidad);     
-        /*if (posicion.y < 0 || posicion.y > width - imagen2.width) {
-        velocidad.y *= -1; }*/
-       
-        if (posicion.x >= width-100 || posicion.x <= 100) {
-      inc=inc -1;
-  }
+     posicion.add(velocidad);       
+        // Si la nube alcanza los bordes laterales, cambiar dirección
+    if (posicion.x >= width - 160 || posicion.x <= 0) {
+      velocidad.x *= -1; // Invertir dirección horizontal
 }
 }
- 
+}
   
