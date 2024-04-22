@@ -13,6 +13,15 @@ class kirby{ //definir clase
     image(imagen1,posicion.x,posicion.y,60,60);    
   }
   
+  public void mover(int direccion){
+    if(direccion==0){
+      this.posicion.x-=this.velocidad.x;
+    }
+    if(direccion==1){
+      this.posicion.x+=this.velocidad.x;
+    }
+  }
+  
   public void setPosicion(PVector posicion){
   this.posicion=posicion;
 }
